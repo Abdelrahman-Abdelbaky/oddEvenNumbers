@@ -17,13 +17,6 @@ print("Odd No", numbers.Where(x => isOdd(x)));
     Console.WriteLine();
 } 
 
-static bool isEven (int num ) { 
-    if( num %2 == 0 ) return true;
-    else return false;
-}
+static bool isEven (int num ) => num % 2 == 0;
 
-static bool isOdd(int num)
-{
-    if (num % 2 != 0) return true;
-    else return false;
-}
+static bool isOdd(int num) => !isEven(num);
